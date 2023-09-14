@@ -667,7 +667,7 @@ body {
 }
 
 .d-none {
-  display: none;
+  visibility: hidden;
 }
 
 .d-inline {
@@ -803,6 +803,14 @@ header nav .container-icon .icon .active {
   align-items: center;
   font-size: 3rem;
   font-family: sans-serif;
+  background: white;
+}
+.right-content-fix {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: calc(100% - 160px);
 }
 .right-content-table {
   width: 100%;
@@ -811,19 +819,35 @@ header nav .container-icon .icon .active {
   width: 100%;
   border-collapse: collapse;
 }
-.right-content-table .table .tablerow-head {
+.right-content-table .table.order-content {
+  margin-top: 100px;
+  border-top: 50px solid white;
+}
+.right-content-table .table .table-row-head {
   width: 100%;
   background: #ddd;
 }
-.right-content-table .table .tablerow-head th {
+.right-content-table .table .table-row-head th {
   text-align: center;
+  font-family: sans-serif;
+  font-size: 12px;
 }
-.right-content-table .table .tablerow-content {
+.right-content-table .table .table-row {
   width: 100%;
+  transition: background-color 0.2s ease-out;
   background: white;
 }
-.right-content-table .table .tablerow-content td {
+.right-content-table .table .table-row:nth-child(even) {
+  background: #eee;
+}
+.right-content-table .table .table-row.selected {
+  background: #ffdd66;
+}
+.right-content-table .table .table-row td {
   text-align: center;
+  font-family: sans-serif;
+  font-size: 10px;
+  overflow: hidden;
 }
 .right-content-table .table .col-id {
   width: 10%;
@@ -865,6 +889,27 @@ header nav .container-icon .icon .active {
 .right-content-table .table .menu-img {
   width: 20px;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.action-container {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  width: 120px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #a7aaaf;
+  border-radius: 5px;
+}
+.action-container .action-container-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  height: 120px;
 }
 
 /*# sourceMappingURL=main.css.map */
