@@ -794,6 +794,7 @@ header nav .container-icon .icon .active {
 .right-content {
   width: 100%;
   padding: 10px;
+  margin-right: 50px;
 }
 .right-content-title {
   width: 100%;
@@ -805,14 +806,65 @@ header nav .container-icon .icon .active {
 }
 .right-content-table {
   width: 100%;
-  border: 2px solid;
 }
 .right-content-table .table {
+  width: 100%;
   border-collapse: collapse;
 }
-.right-content-table .table .table-head {
+.right-content-table .table .tablerow-head {
   width: 100%;
-  background: #a7aaaf;
+  background: #ddd;
+}
+.right-content-table .table .tablerow-head th {
+  text-align: center;
+}
+.right-content-table .table .tablerow-content {
+  width: 100%;
+  background: white;
+}
+.right-content-table .table .tablerow-content td {
+  text-align: center;
+}
+.right-content-table .table .col-id {
+  width: 10%;
+  padding: 15px;
+}
+.right-content-table .table .col-checkbox {
+  width: 5%;
+}
+.right-content-table .table .col-name {
+  width: 10%;
+}
+.right-content-table .table .col-ad {
+  width: 10%;
+}
+.right-content-table .table .col-ad-2 {
+  color: #a7aaaf;
+}
+.right-content-table .table .col-description {
+  width: 20%;
+}
+.right-content-table .table .col-price {
+  width: 7%;
+}
+.right-content-table .table .col-start {
+  width: 15%;
+}
+.right-content-table .table .col-end {
+  width: 15%;
+}
+.right-content-table .table .col-action {
+  width: 8%;
+}
+.right-content-table .table .sort-img {
+  width: 20px;
+  display: inline;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.right-content-table .table .menu-img {
+  width: 20px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

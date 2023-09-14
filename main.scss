@@ -314,7 +314,7 @@ header {
 .right-content {
   width: 100%;
   padding: 10px;
-
+  margin-right: 50px;
   &-title {
     width: 100%;
     height: 100px;
@@ -326,12 +326,73 @@ header {
 
   &-table {
     width: 100%;
-    border: 2px solid;
+
+
     .table {
-      border-collapse: collapse;
-      .table-head {
+      width: 100%;
+      border-collapse:collapse;
+
+      .tablerow-head {
         width: 100%;
-        background: $light-gray;
+        background: #ddd;
+        th{
+          text-align: center;
+        }
+        
+      }
+      .tablerow-content {
+        width: 100%;
+        background: white;
+        td{
+          text-align: center;
+        }
+        
+      }
+
+      .col-id {
+        width: 10%;
+        padding: 15px;
+      }
+
+      .col-checkbox {
+        width: 5%;
+      }
+
+      .col-name {
+        width: 10%;
+      }
+
+      .col-ad {
+        width: 10%;
+      }
+      .col-ad-2{
+        color: $light-gray;
+      }
+      .col-description {
+        width: 20%;
+      }
+      .col-price {
+        width: 7%;
+      }
+      .col-start {
+        width: 15%;
+      }
+      .col-end {
+        width: 15%;
+      }
+
+      .col-action {
+        width: 8%;
+      }
+      .sort-img{
+        width: 20px;
+        display: inline;        
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+      .menu-img{
+        width: 20px;
+        margin: 0 auto;
       }
     }
   }
