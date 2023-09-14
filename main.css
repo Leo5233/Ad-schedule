@@ -751,47 +751,39 @@ body {
 }
 
 /* style start */
+.main-app {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
-  width: 60px;
+  width: 80px;
   position: fixed;
   top: 0;
   bottom: 0;
   padding: 16px 0;
-  background-color: #001935;
-  z-index: 100;
+  background-color: #003565;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-nav a {
-  display: block;
-  color: #fff;
+nav .container-logo {
+  margin-bottom: 100px;
+  border: 1px solid;
 }
-nav .menu a {
-  margin-bottom: 10px;
+nav .container-icon {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-nav i {
-  font-size: 26px;
+nav .container-icon .icon {
+  margin-top: 50px;
+  width: 40px;
+  padding: 3px;
 }
-
-#main-content {
-  margin-left: 60px;
-}
-
-.card-list-panel .card i {
-  width: 20px;
-  font-size: 16px;
-  text-align: center;
-  margin-right: 5px;
-}
-.card-list-panel .card i.fa-youtube {
-  color: #f11502;
-}
-.card-list-panel .card i.fa-facebook-square {
-  color: #4177f2;
-}
-.card-list-panel .card i.fa-instagram {
-  color: #5b30da;
-}
-.card-list-panel .card i.fa-facebook-square, .card-list-panel .card i.fa-instagram {
-  font-size: 18px;
+nav .container-icon .icon .active {
+  background: white;
 }
 
 /*# sourceMappingURL=main.css.map */
