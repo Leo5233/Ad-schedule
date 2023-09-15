@@ -88,6 +88,9 @@ input:invalid {
 [data-theme=dark] nav .container-icon .icon .active {
   background: #333;
 }
+[data-theme=dark] nav .container-icon .icon .dark-mode-img {
+  background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
+}
 [data-theme=dark] nav .container-icon .icon:first-child {
   background: #333;
 }
@@ -105,6 +108,9 @@ input:invalid {
 }
 [data-theme=dark] .right-content-table .table .table-row:nth-child(even) {
   background: #222;
+}
+[data-theme=dark] .right-content-table .table .table-row.selected {
+  background: #ffdd66;
 }
 [data-theme=dark] .right-content-table .table .col-ad-2 {
   color: #888;
@@ -824,6 +830,13 @@ header nav .container-icon .icon {
 }
 header nav .container-icon .icon .active {
   background: #fff;
+}
+header nav .container-icon .icon .dark-mode-img {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-on.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header nav .container-icon .icon:first-child {
   background: #fff;

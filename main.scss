@@ -99,6 +99,9 @@ $light-gray: #a7aaaf;
           .active {
             background: $white;
           }
+          .dark-mode-img{
+            background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
+          }
         }  
         .icon:first-child {
           background: $white;
@@ -122,6 +125,9 @@ $light-gray: #a7aaaf;
           
           &:nth-child(even) {
             background: $table-row;
+          }
+          &.selected{
+          background: #ffdd66;
           }
         }
         .col-ad-2 {
@@ -355,6 +361,13 @@ header {
 
         .active {
           background: $white;
+        }
+        .dark-mode-img {
+          width: 40px;
+          height: 40px;
+          background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-on.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
         }
       }
       .icon:first-child{
