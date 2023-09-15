@@ -94,6 +94,11 @@ $light-gray: #a7aaaf;
   background: #333;
   nav {
       background-color: $main-blue;
+      .container-logo{
+        .logo-img {
+          background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo-dark.svg");
+        }
+      }
       .container-icon {
         .icon {
           .active {
@@ -103,14 +108,12 @@ $light-gray: #a7aaaf;
             background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
           }
         }  
-        .icon:first-child {
-          background: $white;
-        }
       }
     }
   .right-content { 
     &-title {
       background: $white;
+      color: white;
     }
     &-table {
       .table {
@@ -122,6 +125,8 @@ $light-gray: #a7aaaf;
         }
         .table-row {
           background: $white;
+          border-bottom:1px solid $table-title ;
+          color: #ddd;
           
           &:nth-child(even) {
             background: $table-row;
@@ -346,6 +351,13 @@ header {
 
     .container-logo {
       margin-bottom: 100px;
+      .logo-img{
+        background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80px;
+        height: 30px;
+      }
     }
 
     .container-icon {
@@ -372,7 +384,7 @@ header {
         }
       }
       .icon:first-child{
-        background: $white;
+        background: white;
       }
     }
   }

@@ -85,17 +85,18 @@ input:invalid {
 [data-theme=dark] nav {
   background-color: #444;
 }
+[data-theme=dark] nav .container-logo .logo-img {
+  background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo-dark.svg");
+}
 [data-theme=dark] nav .container-icon .icon .active {
   background: #333;
 }
 [data-theme=dark] nav .container-icon .icon .dark-mode-img {
   background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
 }
-[data-theme=dark] nav .container-icon .icon:first-child {
-  background: #333;
-}
 [data-theme=dark] .right-content-title {
   background: #333;
+  color: white;
 }
 [data-theme=dark] .right-content-table .table .table-row-head {
   background: #666;
@@ -105,6 +106,8 @@ input:invalid {
 }
 [data-theme=dark] .right-content-table .table .table-row {
   background: #333;
+  border-bottom: 1px solid #666;
+  color: #ddd;
 }
 [data-theme=dark] .right-content-table .table .table-row:nth-child(even) {
   background: #222;
@@ -817,6 +820,13 @@ header nav {
 header nav .container-logo {
   margin-bottom: 100px;
 }
+header nav .container-logo .logo-img {
+  background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 80px;
+  height: 30px;
+}
 header nav .container-icon {
   height: 200px;
   display: flex;
@@ -840,7 +850,7 @@ header nav .container-icon .icon .dark-mode-img {
   cursor: pointer;
 }
 header nav .container-icon .icon:first-child {
-  background: #fff;
+  background: white;
 }
 
 .right-content {
