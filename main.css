@@ -79,7 +79,40 @@ input:invalid {
   background: transparent;
 }
 
-/* basic setting */
+[data-theme=dark] {
+  background: #333;
+}
+[data-theme=dark] nav {
+  background-color: #444;
+}
+[data-theme=dark] nav .container-icon .icon .active {
+  background: #333;
+}
+[data-theme=dark] nav .container-icon .icon:first-child {
+  background: #333;
+}
+[data-theme=dark] .right-content-title {
+  background: #333;
+}
+[data-theme=dark] .right-content-table .table .table-row-head {
+  background: #666;
+}
+[data-theme=dark] .right-content-table .table.order-content {
+  border-top: 50px solid #333;
+}
+[data-theme=dark] .right-content-table .table .table-row {
+  background: #333;
+}
+[data-theme=dark] .right-content-table .table .table-row:nth-child(even) {
+  background: #222;
+}
+[data-theme=dark] .right-content-table .table .col-ad-2 {
+  color: #888;
+}
+[data-theme=dark] .action-container {
+  background: #333;
+}
+
 /* 使用@each 產出css size設定 */
 .w-25 {
   width: 25%;
@@ -661,8 +694,6 @@ html {
 
 body {
   height: 100%;
-  background: #f8f7fc;
-  color: #18253d;
   font-family: "PingFang TC";
 }
 
@@ -792,10 +823,10 @@ header nav .container-icon .icon {
   padding: 3px;
 }
 header nav .container-icon .icon .active {
-  background: white;
+  background: #fff;
 }
 header nav .container-icon .icon:first-child {
-  background: white;
+  background: #fff;
 }
 
 .right-content {
@@ -810,7 +841,7 @@ header nav .container-icon .icon:first-child {
   align-items: center;
   font-size: 3rem;
   font-family: sans-serif;
-  background: white;
+  background: #fff;
 }
 .right-content-fix {
   z-index: 2;
@@ -828,11 +859,11 @@ header nav .container-icon .icon:first-child {
 }
 .right-content-table .table.order-content {
   margin-top: 100px;
-  border-top: 50px solid white;
+  border-top: 50px solid #fff;
 }
 .right-content-table .table .table-row-head {
   width: 100%;
-  background: #ddd;
+  background: #dddddd;
 }
 .right-content-table .table .table-row-head th {
   text-align: center;
@@ -842,10 +873,10 @@ header nav .container-icon .icon:first-child {
 .right-content-table .table .table-row {
   width: 100%;
   transition: background-color 0.2s ease-out;
-  background: white;
+  background: #fff;
 }
 .right-content-table .table .table-row:nth-child(even) {
-  background: #eee;
+  background: #eeeeee;
 }
 .right-content-table .table .table-row.selected {
   background: #ffdd66;
@@ -906,9 +937,10 @@ header nav .container-icon .icon:first-child {
   justify-content: space-between;
   width: 120px;
   padding: 10px;
-  background: white;
+  background: #fff;
   border: 1px solid #a7aaaf;
   border-radius: 5px;
+  cursor: pointer;
 }
 .action-container .action-container-col {
   display: flex;

@@ -56,6 +56,7 @@ generateTableRow(generateData())
 const tableRows = document.querySelectorAll('.table-row-select')
 const actionBtns = document.querySelectorAll('.menu-img')
 const actionPanel = document.querySelector('.action-container')
+const darkModeSW = document.getElementById('dark-mode-toggle')
 
 tableRows.forEach( checkbox => {
   checkbox.addEventListener('change',(event) => {
@@ -69,7 +70,15 @@ actionBtns.forEach( actionBtn => {
     let position = getPosition(event.target)
     actionPanel.style.top = position.y + "px";
     actionPanel.style.left = (position.x - 120) + "px";
-    actionPanel.classList.toggle('d-none')
+    actionPanel.classList.toggle('hidden')
 
   })
+})
+
+darkModeSW.addEventListener('change', event => {
+  if (event.target.checked){
+    document.documentElement.setAttribute("data-theme", "dark")
+  } else {
+    document.documentElement.setAttribute("data-theme", "light")
+  }
 })

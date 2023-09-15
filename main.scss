@@ -78,15 +78,62 @@ input:invalid {
   background: transparent;
 }
 
-/* basic setting */
-$body-bg: #f8f7fc;
-$body-color: #18253d;
+$table-title: #dddddd;
+$table-row: #eeeeee;
 $white: #fff;
 $main-blue: #003565;
-$secondary-blue: #3c88fd;
-$freedom-blue: #02b8ff;
-$dark-gray: #4a4a4a;
 $light-gray: #a7aaaf;
+
+
+[data-theme="dark"]{
+  $table-title: #666;
+  $table-row: #222;
+  $white: #333;
+  $main-blue: #444;
+  $light-gray: #555;
+  background: #333;
+  nav {
+      background-color: $main-blue;
+      .container-icon {
+        .icon {
+          .active {
+            background: $white;
+          }
+        }  
+        .icon:first-child {
+          background: $white;
+        }
+      }
+    }
+  .right-content { 
+    &-title {
+      background: $white;
+    }
+    &-table {
+      .table {
+        .table-row-head {
+          background: $table-title;
+        }
+        &.order-content {
+          border-top: 50px solid $white;
+        }
+        .table-row {
+          background: $white;
+          
+          &:nth-child(even) {
+            background: $table-row;
+          }
+        }
+        .col-ad-2 {
+          color: #888;
+        }
+      }
+    }
+  }
+  .action-container {
+    background: $white;
+  }
+}
 
 $sizes: (
   25: 25%,
@@ -176,8 +223,6 @@ html {
 
 body {
   height: 100%;
-  background: $body-bg;
-  color: $body-color;
   font-family: "PingFang TC";
 }
 
@@ -270,6 +315,7 @@ body {
 }
 
 /* style start */
+
 .main-app {
   width: 100%;
   height: 100%;
@@ -308,11 +354,11 @@ header {
         padding: 3px;
 
         .active {
-          background: white;
+          background: $white;
         }
       }
       .icon:first-child{
-        background: white;
+        background: $white;
       }
     }
   }
@@ -329,7 +375,7 @@ header {
     align-items: center;
     font-size: 3rem;
     font-family: sans-serif;
-    background: white;
+    background: $white;
   }
   &-fix {
     z-index: 2;
@@ -348,12 +394,12 @@ header {
 
       &.order-content{
         margin-top: 100px;
-        border-top: 50px solid white;
+        border-top: 50px solid $white;
       }
 
       .table-row-head {
         width: 100%;
-        background: #ddd;
+        background: $table-title;
         th{
           text-align: center;
           font-family: sans-serif;
@@ -364,9 +410,9 @@ header {
       .table-row {
         width: 100%;
         transition: background-color .2s ease-out;
-        background: white;
+        background: $white;
         &:nth-child(even){
-          background: #eee;
+          background: $table-row;
         }
         &.selected{
           background: #ffdd66;
@@ -431,22 +477,23 @@ header {
 }
 
 
-  .action-container{
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    justify-content: space-between;
-    width: 120px;
-    padding: 10px;
-    background: white;
-    border: 1px solid $light-gray;
-    border-radius: 5px;
+.action-container{
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  width: 120px;
+  padding: 10px;
+  background: $white;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  cursor: pointer;
 
-    .action-container-col{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      text-align: left;
-      height: 120px;
-    }
+  .action-container-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    height: 120px;
   }
+}
