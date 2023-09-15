@@ -368,6 +368,7 @@ header {
           background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-on.svg");
           background-repeat: no-repeat;
           background-size: cover;
+          cursor: pointer;
         }
       }
       .icon:first-child{
@@ -417,6 +418,9 @@ header {
           text-align: center;
           font-family: sans-serif;
           font-size: 12px;
+          img{
+            cursor: pointer;
+          }
         }
         
       }

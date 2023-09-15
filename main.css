@@ -837,6 +837,7 @@ header nav .container-icon .icon .dark-mode-img {
   background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-on.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 header nav .container-icon .icon:first-child {
   background: #fff;
@@ -882,6 +883,9 @@ header nav .container-icon .icon:first-child {
   text-align: center;
   font-family: sans-serif;
   font-size: 12px;
+}
+.right-content-table .table .table-row-head th img {
+  cursor: pointer;
 }
 .right-content-table .table .table-row {
   width: 100%;
