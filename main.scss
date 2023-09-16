@@ -77,23 +77,22 @@ input:invalid {
   width: 0px;
   background: transparent;
 }
-
-$table-title: #dddddd;
-$table-row: #eeeeee;
-$white: #fff;
-$main-blue: #003565;
-$light-gray: #a7aaaf;
-
+:root{
+  --table-title: #ddd;
+  --table-row: #eee;
+  --white: #fff;
+  --main-blue: #003565;
+  --light-gray: #a7aaaf;
+}
 
 [data-theme="dark"]{
-  $table-title: #666;
-  $table-row: #222;
-  $white: #333;
-  $main-blue: #444;
-  $light-gray: #555;
-  background: #333;
+  --table-title: #666;
+  --table-row: #222;
+  --white: #333;
+  --main-blue: #444;
+  --light-gray: #555;
+  
   nav {
-      background-color: $main-blue;
       .container-logo{
         .logo-img {
           background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/logo-dark.svg");
@@ -101,9 +100,6 @@ $light-gray: #a7aaaf;
       }
       .container-icon {
         .icon {
-          .active {
-            background: $white;
-          }
           .dark-mode-img{
             background-image: url("https://raw.githubusercontent.com/ALPHACamp/WFE-data-table/0f97f3113bff18353154b8644eb0b31fff2a3bef/icons/darkmode-off.svg");
           }
@@ -112,27 +108,15 @@ $light-gray: #a7aaaf;
     }
   .right-content { 
     &-title {
-      background: $white;
       color: white;
     }
     &-table {
       .table {
-        .table-row-head {
-          background: $table-title;
-        }
-        &.order-content {
-          border-top: 50px solid $white;
-        }
         .table-row {
-          background: $white;
-          border-bottom:1px solid $table-title ;
+          border-bottom:1px solid var(--table-title) ;
           color: #ddd;
-          
-          &:nth-child(even) {
-            background: $table-row;
-          }
           &.selected{
-          background: #ffdd66;
+          background: #d70;
           }
         }
         .col-ad-2 {
@@ -140,9 +124,6 @@ $light-gray: #a7aaaf;
         }
       }
     }
-  }
-  .action-container {
-    background: $white;
   }
 }
 
@@ -230,6 +211,7 @@ $spacers: (
 html {
   font-size: 16px;
   height: 100%;
+  background: var(--white);
 }
 
 body {
@@ -333,6 +315,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  background: var(--white);
 }
 
 header {
@@ -344,7 +327,7 @@ header {
     top: 0;
     bottom: 0;
     padding: 16px 0;
-    background-color: $main-blue;
+    background-color: var(--main-blue);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -366,13 +349,16 @@ header {
       flex-direction: column;
       justify-content: space-around;
 
-      .icon {
+      .icon, .icon-dark-mode {
         margin-top: 50px;
         width: 40px;
         padding: 3px;
-
-        .active {
-          background: $white;
+        z-index: 1;
+        &.active {
+          background: #aaa;
+        }
+        img{
+          z-index: 0;
         }
         .dark-mode-img {
           width: 40px;
@@ -382,9 +368,6 @@ header {
           background-size: cover;
           cursor: pointer;
         }
-      }
-      .icon:first-child{
-        background: white;
       }
     }
   }
@@ -401,7 +384,7 @@ header {
     align-items: center;
     font-size: 3rem;
     font-family: sans-serif;
-    background: $white;
+    background: var(--white);
   }
   &-fix {
     z-index: 2;
@@ -420,12 +403,12 @@ header {
 
       &.order-content{
         margin-top: 100px;
-        border-top: 50px solid $white;
+        border-top: 50px solid var(--white);
       }
 
       .table-row-head {
         width: 100%;
-        background: $table-title;
+        background: var(--table-title);
         th{
           text-align: center;
           font-family: sans-serif;
@@ -439,9 +422,9 @@ header {
       .table-row {
         width: 100%;
         transition: background-color .2s ease-out;
-        background: $white;
+        background: var(--white);
         &:nth-child(even){
-          background: $table-row;
+          background: var(--table-row);
         }
         &.selected{
           background: #ffdd66;
@@ -472,7 +455,7 @@ header {
         width: 10%;
       }
       .col-ad-2{
-        color: $light-gray;
+        color: var(--light-gray);
       }
       .col-description {
         width: 20%;
@@ -513,8 +496,8 @@ header {
   justify-content: space-between;
   width: 120px;
   padding: 10px;
-  background: $white;
-  border: 1px solid $light-gray;
+  background: var(--white);
+  border: 1px solid var(--light-gray);
   border-radius: 5px;
   cursor: pointer;
 

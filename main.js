@@ -50,12 +50,13 @@ function getPosition(element) {
   return { x: x, y: y };
 }
 
-// const data = generateData()
+
 generateTableRow(generateData())
 const tableRows = document.querySelectorAll('.table-row-select')
 const actionBtns = document.querySelectorAll('.menu-img')
 const actionPanel = document.querySelector('.action-container')
 const darkModeSW = document.getElementById('dark-mode-toggle')
+const icons = document.querySelectorAll('.icon')
 
 tableRows.forEach( checkbox => {
   checkbox.addEventListener('change',(event) => {
@@ -74,6 +75,19 @@ actionBtns.forEach( actionBtn => {
   })
 })
 
+//左方icon點擊時切換樣式
+icons.forEach( icon => {
+  icon.addEventListener('click', event => {
+    const id = event.target.dataset.id
+    console.log(icons.length)
+    for (let i = 0; i < icons.length; i++){
+      icons[i].classList.remove('active')
+    }
+    icons[Number(id-1)].classList.add('active')
+  })
+})
+
+//切換色彩模式
 darkModeSW.addEventListener('change', event => {
   if (event.target.checked){
     document.documentElement.setAttribute("data-theme", "dark")
