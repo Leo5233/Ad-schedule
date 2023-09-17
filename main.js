@@ -79,7 +79,6 @@ actionBtns.forEach( actionBtn => {
 icons.forEach( icon => {
   icon.addEventListener('click', event => {
     const id = event.target.dataset.id
-    console.log(icons.length)
     for (let i = 0; i < icons.length; i++){
       icons[i].classList.remove('active')
     }
