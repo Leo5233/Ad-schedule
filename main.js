@@ -57,6 +57,7 @@ const actionBtns = document.querySelectorAll('.menu-img')
 const actionPanel = document.querySelector('.action-container')
 const darkModeSW = document.getElementById('dark-mode-toggle')
 const icons = document.querySelectorAll('.icon')
+let activeIcon = 0
 
 tableRows.forEach( checkbox => {
   checkbox.addEventListener('change',(event) => {
@@ -79,10 +80,9 @@ actionBtns.forEach( actionBtn => {
 icons.forEach( icon => {
   icon.addEventListener('click', event => {
     const id = event.target.dataset.id
-    for (let i = 0; i < icons.length; i++){
-      icons[i].classList.remove('active')
-    }
-    icons[Number(id-1)].classList.add('active')
+      icons[activeIcon].classList.remove('active')    
+    icons[Number(id - 1)].classList.add('active')
+    activeIcon = id - 1
   })
 })
 
